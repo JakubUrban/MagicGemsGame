@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Card.gd" type="Script" id=1]
+[ext_resource path="res://Assets/active.png" type="Texture" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+
+flags = 4
+load_path = "res://.import/Card.png-e37ea83a6b2feb8bae1e0001a116f234.stex"
+
+[node name="Card" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CardBackground" type="Sprite" parent="." index="0"]
+
+position = Vector2( 13.6333, 16.5068 )
+scale = Vector2( 0.271294, 0.310884 )
+texture = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Pattern" type="Node2D" parent="." index="1"]
+
+position = Vector2( -82.6501, -106.279 )
+
+[node name="GreenLabel" type="Sprite" parent="." index="2"]
+
+visible = false
+position = Vector2( 14.7326, -208.387 )
+scale = Vector2( 0.273535, 0.322638 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+

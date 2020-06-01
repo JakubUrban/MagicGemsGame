@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Grid.gd" type="Script" id=1]
+[ext_resource path="res://Assets/tlo.png" type="Texture" id=2]
+
+[node name="Grid" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+gridSize = Vector2( 7, 7 )
+blockSize = 20
+spaceBetween = 2
+
+[node name="GridBackground" type="Sprite" parent="." index="0"]
+
+position = Vector2( 328.501, 322.448 )
+scale = Vector2( 0.734572, 0.596014 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

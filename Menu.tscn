@@ -1,0 +1,353 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Board.jpeg" type="Texture" id=2]
+[ext_resource path="res://Assets/tlo.png" type="Texture" id=3]
+[ext_resource path="res://WoodenButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/MotionControlFont_48.tres" type="DynamicFont" id=5]
+
+[node name="Menu" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 343.0
+margin_top = 234.0
+margin_right = 416.0
+margin_bottom = 313.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -257.415 ]
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 133.78, 316.627 )
+rotation = 4.71239
+scale = Vector2( 1.1182, 1.34717 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 1119.2, 316.887 )
+rotation = 4.71239
+scale = Vector2( 1.1182, -1.3 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 300.0
+margin_top = 479.0
+margin_right = 652.0
+margin_bottom = 1193.0
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 20
+alignment = 0
+_sections_unfolded = [ "Rect", "custom_constants" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="VBoxContainer" index="0"]
+
+position = Vector2( 177.101, 326.584 )
+scale = Vector2( 0.431324, 0.572862 )
+texture = ExtResource( 3 )
+
+[node name="NewGame" parent="VBoxContainer" index="1" instance=ExtResource( 4 )]
+
+margin_right = 352.0
+margin_bottom = 150.0
+_text = "New Game"
+
+[node name="GameRules" parent="VBoxContainer" index="2" instance=ExtResource( 4 )]
+
+margin_top = 170.0
+margin_right = 352.0
+margin_bottom = 320.0
+_text = "Game Rules"
+
+[node name="About" parent="VBoxContainer" index="3" instance=ExtResource( 4 )]
+
+margin_top = 340.0
+margin_right = 352.0
+margin_bottom = 490.0
+_text = "About"
+
+[node name="Exit" parent="VBoxContainer" index="4" instance=ExtResource( 4 )]
+
+margin_top = 510.0
+margin_right = 352.0
+margin_bottom = 660.0
+_text = "Exit"
+
+[node name="VScrollBar" type="VScrollBar" parent="." index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 183.0
+margin_top = -133.0
+margin_right = 857.0
+margin_bottom = 878.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 0.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+custom_step = -1.0
+
+[node name="TextureRect" type="TextureRect" parent="VScrollBar" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 14.0
+margin_top = 63.0
+margin_right = 506.0
+margin_bottom = 847.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+
+[node name="Control" type="Control" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="AboutPopup" type="PopupPanel" parent="." index="5"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 69.0
+margin_top = 183.0
+margin_right = 1143.0
+margin_bottom = 846.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+
+[node name="AboutText" type="RichTextLabel" parent="AboutPopup" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 84.0
+margin_top = 614.0
+margin_right = 649.0
+margin_bottom = 1563.0
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = false
+bbcode_text = "Projekt wykonany w ramach pracy dyplomowej na Uniwersytecie Kazimierza Wielkiego
+
+Autor: Jakub Urban
+Promotr: Jacek Czerniak
+
+2019"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Projekt wykonany w ramach pracy dyplomowej na Uniwersytecie Kazimierza Wielkiego
+
+Autor: Jakub Urban
+Promotr: Jacek Czerniak
+
+2019"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode" ]
+
+[node name="AboutButton" type="Button" parent="AboutPopup" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 487.0
+margin_right = 425.0
+margin_bottom = 744.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="GameRulesPopup" type="PopupPanel" parent="." index="6"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 67.0
+margin_top = 173.0
+margin_right = 1141.0
+margin_bottom = 836.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+
+[node name="GameRulesText" type="RichTextLabel" parent="GameRulesPopup" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 73.0
+margin_top = 663.0
+margin_right = 638.0
+margin_bottom = 1612.0
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = false
+bbcode_text = "Gra polega na ułożeniu zadanego wzoru na wspólnej planszy
+
+- Gracze rozgrywają swoje kolejki zgodnie z ruchem wskazówek zegara. Pierwszy gracz wybierany jest losowo.
+- Nowy kamień można dostawić jedynie na miejsce sąsiadujące z innym kamieniem w pionie lub poziomie. 
+- Zamiana miejscem istniejących kamieni możliwa jest tylko dla sąsiadujących ze sobą. 
+- Zwycięstwo można ogłosić tylko w swojej turze, jeżeli jakiś gracz przypadkiem ułoży nasz -wzór to musimy czekać do swojej tury.
+- Jeżeli skończą się kolorowe kamienie w puli każdemu z graczy zostaje jedna tura. Jeżeli nadal nie ma zwycięzcy zostaje ogłoszony remis. 
+
+"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Gra polega na ułożeniu zadanego wzoru na wspólnej planszy
+
+- Gracze rozgrywają swoje kolejki zgodnie z ruchem wskazówek zegara. Pierwszy gracz wybierany jest losowo.
+- Nowy kamień można dostawić jedynie na miejsce sąsiadujące z innym kamieniem w pionie lub poziomie. 
+- Zamiana miejscem istniejących kamieni możliwa jest tylko dla sąsiadujących ze sobą. 
+- Zwycięstwo można ogłosić tylko w swojej turze, jeżeli jakiś gracz przypadkiem ułoży nasz -wzór to musimy czekać do swojej tury.
+- Jeżeli skończą się kolorowe kamienie w puli każdemu z graczy zostaje jedna tura. Jeżeli nadal nie ma zwycięzcy zostaje ogłoszony remis. 
+
+"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Anchor", "BBCode", "Grow Direction", "Margin", "Rect", "custom_fonts" ]
+
+[node name="GameRulesButton" type="Button" parent="GameRulesPopup" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 487.0
+margin_right = 425.0
+margin_bottom = 744.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_NewGame_pressed"]
+
+[connection signal="pressed" from="VBoxContainer/GameRules" to="." method="_on_GameRules_pressed"]
+
+[connection signal="pressed" from="VBoxContainer/About" to="." method="_on_About_pressed"]
+
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
+
+[connection signal="pressed" from="AboutPopup/AboutButton" to="." method="_on_AboutButton_pressed"]
+
+[connection signal="pressed" from="GameRulesPopup/GameRulesButton" to="." method="_on_GameRulesButton_pressed"]
+
+
